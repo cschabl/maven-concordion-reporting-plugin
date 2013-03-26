@@ -47,7 +47,7 @@ public class ConcordionReportMojoTest  {
         assertEquals("Concordion", mojo.getName(null));
         assertEquals("concordion/index", mojo.getOutputName());
 
-        assertEquals(concordionDir.getAbsolutePath(), mojo.getOutputDirectory());
+        assertEquals(concordionDir, new File(mojo.getOutputDirectory()));
 
         assertEquals(project, mojo.getProject());
         assertEquals(siteRenderer, mojo.getSiteRenderer());
