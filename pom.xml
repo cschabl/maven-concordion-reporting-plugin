@@ -1,11 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.bassman5</groupId>
-    <artifactId>maven-concordion-reporting-plugin</artifactId>
+    <groupId>com.github.cschabl</groupId>
+    <artifactId>maven-concordion-reporting-plugin-java5</artifactId>
     <version>1.0.3-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     <name>Concordion Site Report plugin</name>
-    <description>A maven plugin to incorporate concordion reports into a maven site report in the project reports section</description>
+    <description>A maven plugin to incorporate concordion reports into a maven site report in the project reports section.
+                 This fork runs with Java 5 as concordion itself.</description>
     <url>http://bassman5.github.com/maven-concordion-reporting-plugin</url>
 
     <parent>
@@ -22,12 +23,18 @@
                 <role>Project Owner</role>
             </roles>
         </developer>
+        <developer>
+            <id>cschabl</id>
+            <roles>
+                <role>Contributor</role>
+            </roles>
+        </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:bassman5/maven-concordion-reporting-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:bassman5/maven-concordion-reporting-plugin.git</developerConnection>
-        <url>https://github.com/bassman5/maven-concordion-reporting-plugin</url>
+        <connection>scm:git:git@github.com:cschabl/maven-concordion-reporting-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:cschabl/maven-concordion-reporting-plugin.git</developerConnection>
+        <url>https://github.com/cschabl/maven-concordion-reporting-plugin</url>
 
     </scm>
 
@@ -50,7 +57,7 @@
         <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sitePluginVersion>3.0</sitePluginVersion>
-        <concordion.version>1.4.2</concordion.version>
+        <concordion.version>1.4.3</concordion.version>
         <concordion-extensions.version>1.1.0</concordion-extensions.version>
     </properties>
 
@@ -116,8 +123,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.5</source>
+                    <target>1.5</target>
                 </configuration>
             </plugin>
             <plugin>
